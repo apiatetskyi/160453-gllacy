@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Глейси</title>
+</head>
+<body>
+  <header class="page-header">
+    <img src="http://placehold.it/153x63" width="153" height="63" alt="GllacyShop">
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__item">
+          <a href="#">Каталог</a>
+          <ul class="sub-nav">
+            <li class="sub-nav__group-name"><a href="#">Новинки</a></li>
+            <li class="sub-nav__item"><a href="#">Сливочное</a></li>
+            <li class="sub-nav__item"><a href="#">Щербеты</a></li>
+            <li class="sub-nav__item"><a href="#">Фруктовый лед</a></li>
+            <li class="sub-nav__item"><a href="#">Мелорин</a></li>
+          </ul>
+        </li>
+        <li class="main-nav__item"><a href="#">Доставка и оплата</a></li>
+        <li class="main-nav__item"><a href="#">О компании</a></li>
+      </ul>
+    </nav>
+    <div class="user-block">
+      <form class="search-form" action="#" method="POST">
+        <input type="text" name="search-query" placeholder="Что ищем?">
+        <button type="submit">Найти</button>
+      </form>
+      <div class="login-btn"></div>
+      <div class="cart"></div>
+      <div class="contact-info"></div>
+    </div>
+  </header>
+</body>
 </html>
