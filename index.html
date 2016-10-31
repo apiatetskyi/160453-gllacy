@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси</title>
@@ -8,14 +8,16 @@
   <header class="page-header">
     <div class="container">
       <div class="logo">
-        <a class="logo__link"><img class="logo__img" src="http://placehold.it/153x63" width="153" height="63" alt="GllacyShop"></a>
+        <a class="logo__link">
+          <img class="logo__img" src="http://placehold.it/153x63" width="153" height="63" alt="GllacyShop">
+        </a>
       </div>
       <nav class="main-nav">
         <ul>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Каталог</a>
             <ul class="sub-nav">
-              <li class="sub-nav__title">Новинки</li>
+              <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_bold" href="#">Новинки</a></li>
               <li class="sub-nav__item"><a class="sub-nav__link" href="#">Сливочное</a></li>
               <li class="sub-nav__item"><a class="sub-nav__link" href="#">Щербеты</a></li>
               <li class="sub-nav__item"><a class="sub-nav__link" href="#">Фруктовый лед</a></li>
@@ -47,20 +49,22 @@
         <div class="cart">
           <a class="cart__btn" href="#" >Пусто</a>
           <div class="cart__product-list">
-            <ul>
-              <li class="cart__product-item">
-                <img class="cart__product-img" src="http://placehold.it/33x33" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                <span class="cart__product-name">Пломбир с апельсиновым джемом</span>
-                <span class="cart__product-quantity">1,5 кг х <span class="cart__product-price">200 руб.</span></span>
-                <span class="cart__product-cost">300 руб.</span>
-              </li>
-              <li class="cart__product-item">
-                <img class="cart__product-img" src="http://placehold.it/33x33" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                <span class="cart__product-name">Клубничный пломбир с присыпкой из белого шоколада</span>
-                <span class="cart__product-quantity">1,5 кг х <span class="cart__product-price">300 руб.</span></span>
-                <span class="cart__product-cost">450 руб.</span>
-              </li>
-            </ul>
+            <table>
+              <tr class="cart__product-item">
+                <td class="cart__del"><a class="cart__del-btn" href="#">Delete</a></td>
+                <td class="cart__product-img"><img src="http://placehold.it/33x33" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                <td class="cart__product-name">Пломбир с апельсиновым джемом</td>
+                <td class="cart__product-quantity">1,5 кг х <span class="cart__product-price">200 руб.</span></td>
+                <td class="cart__product-cost">300 руб.</td>
+              </tr>
+              <tr class="cart__product-item">
+                <td class="cart__del"><a class="cart__del-btn" href="#">Delete</a></td>
+                <td class="cart__product-img"><img src="http://placehold.it/33x33" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                <td class="cart__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td class="cart__product-quantity">1,5 кг х <span class="cart__product-price">300 руб.</span></td>
+                <td class="cart__product-cost">450 руб.</td>
+              </tr>
+            </table>
             <p class="cart__total-cost">Итого: 750 руб.</p>
             <a class="cart-btn" href="#">Оформить заказ</a>
           </div>
@@ -132,25 +136,17 @@
     </div>
     <div class="features">
       <h2 class="features__title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-      <div class="features__item">
-        <p class="features__desc">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-      </div>
-      <div class="features__item">
-        <p class="features__desc">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-      </div>
-      <div class="features__item">
-        <p class="features__desc">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-      </div>
-      <div class="features__item">
-        <p class="features__desc">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-      </div>
+      <p class="features__desc">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+      <p class="features__desc">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+      <p class="features__desc">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+      <p class="features__desc">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
     </div>
     <div class="news">
       <div class="blog-news">
         <h2 class="blog-news__title">Новое в нашем блоге</h2>
         <a class="blog-news__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </div>
-      <div class="newsletter">
+      <div class="letter-news">
         <form class="form" id="subscribe-form" action="#" method="POST">
           <p class="form__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
           <input class="form__input" type="email" name="e-mail" placeholder="Электронная почта">
@@ -160,7 +156,7 @@
     </div>
   </main>
   <div class="map">
-    <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6260535226243!2d30.32112936634473!3d59.93834703187612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sua!4v1477571535893" width="900" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6260535226243!2d30.32112936634473!3d59.93834703187612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sua!4v1477571535893" width="900" height="430" allowfullscreen></iframe>
     <div class="contacts">
       <p class="contacts__text">
         Адрес главного офиса и<br>офлайн магазина:<br>
@@ -171,7 +167,7 @@
         <b>8 812 450-25-25</b><br>
         (с 10 до 20 ежедневно)
       </p>
-      <a class="btn" href="#" >Форма обратной связи</a>
+      <a class="btn" href="#">Форма обратной связи</a>
     </div>
   </div>
   <footer class="page-footer">
@@ -191,13 +187,13 @@
         </li>
       </ul>
       <div class="more-info">
-        <a class="more-info__link more-info__link" href="#"><b>Для поставщиков</b></a>
+        <a class="more-info__link more-info__link_bold" href="#"><b>Для поставщиков</b></a>
         <a class="more-info__link" href="#">Наши документы</a>
         <a class="more-info__link" href="#">О производстве</a>
         <a class="more-info__link" href="#">Экологические стандарты</a>
       </div>
       <div class="copyright">
-        <a href="htmlacademy.ru"><img class="copyright__logo" src="http://placehold.it/108x38" width="108" height="38" alt="HTMLAcademy" class="copyright__img"></a>
+        <a href="htmlacademy.ru"><img class="copyright__logo" src="http://placehold.it/108x38" width="108" height="38" alt="HTMLAcademy"></a>
         <span class="copyright__info">Сделано в <a class="copyright__link" href="htmlacademy.ru">HTML Academy</a> © 2016</span>
       </div>
     </div>
