@@ -1,0 +1,21 @@
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+}
+
+.slider__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.inner-page__h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 41px;
+  color: #ffffff;
+}
