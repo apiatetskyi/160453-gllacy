@@ -14,7 +14,9 @@ body {
 .container::after,
 .main-nav::after,
 .promo::after,
-.news::after {
+.news::after,
+.page-header::after,
+.page-footer::after {
   content: "";
 
   display: table;
@@ -116,7 +118,7 @@ body {
   margin-bottom: 40px;
 }
 
-.promo__item {
+.promo-raspberry {
   float: left;
   width: 48.865619%;
   margin-right: 2.268760%;
@@ -124,18 +126,17 @@ body {
   outline: 1px solid red;
 }
 
-.promo__item:last-child {
-  margin-right: 0;
+.promo-chocolate {
+  float: right;
+  width: 48.865619%;
+
+  outline: 1px solid red;
 }
 
 .products {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 
   font-size: 0;
-}
-
-.products_catalog {
-  padding-bottom: 40px;
 }
 
 .product {
@@ -291,9 +292,10 @@ body {
 }
 
 .copyright__info {
-  float: right;
+  display: block;
 
   font-size: 12px;
+  text-align: right;
 }
 
 .filter-form {
@@ -304,17 +306,20 @@ body {
 }
 
 .paginator {
-  float: right;
-  min-width: 195px;
+  margin-bottom: 30px;
+
+  text-align: right;
 
   outline: 1px solid red;
 }
 
 .paginator__list {
+  display: inline-block;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+  vertical-align: top;
 }
 
 .paginator__item {
