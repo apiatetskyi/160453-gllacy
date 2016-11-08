@@ -54,6 +54,100 @@ body {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+/*------ form ------*/
+.form {
+  padding: 20px 15px;
+
+  background: #f8f7f4;
+  border-radius: 6px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 9px 13px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #323232;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+
+  opacity: 1;
+}
+
+.form__input::-moz-placeholder {
+  font-weight: 400;
+  color: #999999;
+
+  opacity: 1;
+}
+
+.form__input:-ms-input-placeholder {
+  font-weight: 400;
+  line-height: normal;
+  color: #999999;
+
+  opacity: 1;
+}
+
+.form__input:hover {
+  border-color: #c7c6c5;
+  box-shadow: 0 0 0 1px #c7c6c5;
+}
+
+.form__input:focus {
+  border-color: #8fbdec;
+  box-shadow: 0 0 0 1px #8fbdec;
+}
+
+.form__input_search {
+  margin-bottom: 0;
+}
+
+.form__link-holder {
+  float: right;
+  width: 120px;
+}
+
+.form__link {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #323232;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.form__link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+
+  height: 1px;
+
+  background: #adacaa;
+}
+
+.form__btn_login {
+  float: left;
+  padding: 10px 26px;
+}
+
 /*------ END general properties ------*/
 .page-header {
   min-height: 70px;
