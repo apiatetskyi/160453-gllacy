@@ -322,9 +322,23 @@ body {
   opacity: .2;
 }
 
+/*------ user-block ------*/
 .user-block {
+  position: relative;
+
   float: right;
-  width: 23.298429%;
+  width: 22.862129%;
+  padding-top: 22px;
+
+  font-size: 0;
+}
+
+.user-block__icon::before {
+  content: "";
+  position: absolute;
+
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
 }
 
 .search {
