@@ -8,50 +8,50 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="page-container">
-    <div class="container">
-      <header class="page-header page-header_catalog">
-        <nav class="main-nav">
+  <div class="page-wrapper">
+    <div class="page-content">
+      <header class="page-header page-header_catalog clearfix">
+        <nav class="main-nav clearfix">
           <div class="logo">
             <a class="logo__link" href="index.html">
               <img class="logo__img" src="img/header-logo.png" width="154" height="64" alt="GllacyShop">
             </a>
           </div>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Каталог</a>
+            <li class="main-nav__item main-nav__item_active">
+              <a class="main-nav__link">Каталог</a>
               <ul class="sub-nav">
                 <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_bold" href="#">Новинки</a></li>
-                <li class="sub-nav__item"><a class="sub-nav__link" href="#">Сливочное</a></li>
+                <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_active">Сливочное</a></li>
                 <li class="sub-nav__item"><a class="sub-nav__link" href="#">Щербеты</a></li>
                 <li class="sub-nav__item"><a class="sub-nav__link" href="#">Фруктовый лед</a></li>
                 <li class="sub-nav__item"><a class="sub-nav__link" href="#">Мелорин</a></li>
               </ul>
             </li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка и оплата</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">О компании</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">О Компании</a></li>
           </ul>
         </nav>
-        <div class="user-block">
+        <div class="user-block clearfix">
           <div class="search">
-            <a class="search__btn" href="#">Поиск</a>
-            <form class="form" id="search-form" action="#" method="POST">
+            <a class="search__btn user-block__icon" href="#">Поиск</a>
+            <form class="form search__form" id="search-form" action="#" method="POST">
               <input class="form__input" type="text" name="search-query" placeholder="Что ищем?">
-              <button class="btn_hidden" type="submit" form="search-form">Найти</button>
+              <button class="hidden" type="submit" form="search-form">Найти</button>
             </form>
           </div>
           <div class="login">
-            <a class="login__btn" href="#">Вход</a>
-            <form class="form" id="login-form" action="#" method="POST">
+            <a class="login__btn user-block__icon" href="#">Вход</a>
+            <form class="form login__form" id="login-form" action="#" method="POST">
               <input class="form__input" type="email" name="e-mail" placeholder="Электронная почта">
               <input class="form__input" type="password" name="password" placeholder="Пароль">
-              <button class="btn" type="submit" form="login-form">Войти</button>
+              <button class="btn form__btn" type="submit" form="login-form">Войти</button>
               <a class="form__link" href="#">Забыли пароль?</a>
               <a class="form__link" href="#">Новая регистрация</a>
             </form>
           </div>
           <div class="cart">
-            <a class="cart__btn" href="#">2 товара</a>
+            <a class="cart__btn user-block__icon" href="#">Пусто</a>
             <div class="cart__product-list">
               <table>
                 <tr class="cart__product-item">
@@ -70,14 +70,14 @@
                 </tr>
               </table>
               <p class="cart__total-cost">Итого: 750 руб.</p>
-              <a class="cart-btn" href="#">Оформить заказ</a>
+              <a class="btn cart__btn" href="#">Оформить заказ</a>
             </div>
           </div>
-          <div class="contact-info">
-            С 10 до 20, ежедневно
-            <br>
-            <b class="contact-info__phone">8 812 450-25-25</b>
-          </div>
+        </div>
+        <div class="page-header__contacts">
+          С 10 до 20, ежедневно
+          <br>
+          <b class="page-header__phone">8 812 450-25-25</b>
         </div>
       </header>
       <main class="inner-page">
@@ -86,7 +86,7 @@
           <li class="bread-crumbs__item"><a class="bread-crumbs__link" href="catalog.html">Каталог</a></li>
           <li class="bread-crumbs__item"><a class="bread-crumbs__link bread-crumbs__link_active">Сливочное</a></li>
         </ul>
-        <h1 class="inner-page__h1">Сливочное мороженое</h1>
+        <h1 class="inner-page__title">Сливочное мороженое</h1>
         <form class="filter-form" action="#" method="GET">
           <label class="filter-form__label" for="sorting">Сортировка:</label>
           <select class="filter-form__sorting" id="sorting" name="sorting">
@@ -217,7 +217,7 @@
           </ul>
         </div>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer clearfix">
         <ul class="social-links">
           <li class="social-links__item">
             <a class="social-links__link social-links__twi" href="#">twitter.com</a>
