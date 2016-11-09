@@ -220,8 +220,7 @@ body {
 /*------ main-nav ------*/
 .main-nav {
   float: left;
-  width: 74.432809%;
-  margin-right: 2.268760%;
+  min-width: 560px;
 }
 
 .main-nav__list {
@@ -300,6 +299,7 @@ body {
 .sub-nav {
   position: absolute;
   left: -7px;
+  z-index: 5;
 
   display: none;
   min-width: 143px;
@@ -366,9 +366,10 @@ body {
 /*------ user-block ------*/
 .user-block {
   position: relative;
+  z-index: 5;
 
   float: right;
-  width: 22.862129%;
+  min-width: 267px;
   padding-top: 22px;
 
   font-size: 0;
@@ -388,6 +389,7 @@ body {
 
   display: inline-block;
   margin-right: 10px;
+  margin-left: 5px;
 
   font-size: 16px;
   vertical-align: top;
@@ -445,6 +447,7 @@ body {
   position: relative;
 
   display: inline-block;
+  margin-right: 9px;
 
   font-size: 16px;
   vertical-align: top;
