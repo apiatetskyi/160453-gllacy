@@ -34,22 +34,24 @@
             <li class="main-nav__item"><a class="main-nav__link" href="#">О Компании</a></li>
           </ul>
         </nav>
-        <div class="user-block clearfix">
+        <div class="user-block">
           <div class="search">
             <a class="search__btn user-block__icon" href="#">Поиск</a>
             <form class="form search__form" id="search-form" action="#" method="POST">
-              <input class="form__input" type="text" name="search-query" placeholder="Что ищем?">
+              <input class="form__input form__input_search" type="text" name="search-query" placeholder="Что ищем?">
               <button class="hidden" type="submit" form="search-form">Найти</button>
             </form>
           </div>
           <div class="login">
             <a class="login__btn user-block__icon" href="#">Вход</a>
-            <form class="form login__form" id="login-form" action="#" method="POST">
+            <form class="form login__form clearfix" id="login-form" action="#" method="POST">
               <input class="form__input" type="email" name="e-mail" placeholder="Электронная почта">
               <input class="form__input" type="password" name="password" placeholder="Пароль">
-              <button class="btn form__btn" type="submit" form="login-form">Войти</button>
-              <a class="form__link" href="#">Забыли пароль?</a>
-              <a class="form__link" href="#">Новая регистрация</a>
+              <button class="btn form__btn_login" type="submit" form="login-form">Войти</button>
+              <div class="form__link-holder">
+                <a class="form__link" href="#">Забыли пароль?</a>
+                <a class="form__link" href="#">Новая регистрация</a>
+              </div>
             </form>
           </div>
           <div class="cart cart_empty">
@@ -119,6 +121,24 @@
             <img class="product__img" src="img/product-1.png" width="200" height="200" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <span class="product__price">310 руб/кг</span>
             <a class="product__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </article>
+          <article class="product product_hit">
+            <img class="product__img" src="img/product-2.png" width="200" height="200" alt="Сливочно-кофейное с кусочками шоколада">
+            <span class="product__price">380 руб/кг</span>
+            <a class="product__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </article>
+          <article class="product product_hit">
+            <img class="product__img" src="img/product-3.png" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <span class="product__price">355 руб/кг</span>
+            <a class="product__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </article>
+          <article class="product product_hit">
+            <img class="product__img" src="img/product-4.png" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
+            <span class="product__price">415 руб/кг</span>
+            <a class="product__link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             <a class="btn" href="#">Быстрый просмотр</a>
           </article>
           <article class="product product_hit">

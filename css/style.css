@@ -341,10 +341,128 @@ body {
   background-repeat: no-repeat;
 }
 
+/*------ search ------*/
 .search {
+  position: relative;
+
+  display: inline-block;
+  margin-right: 10px;
+
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.search__btn {
+  position: relative;
+
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+
+  font-size: 0;
+
+  background: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+}
+
+.search__btn::before {
+  top: 50%;
+  left: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  background-position: -5px -441px;
+  transform: translate(-50%, -50%);
+}
+
+.search:hover .search__btn {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.search:hover .search__btn::before {
+  background-position: -5px -468px;
+}
+
+.search__form {
+  position: absolute;
+  right: 0;
+
+  display: none;
+  width: 311px;
+
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+}
+
+.search:hover .search__form {
+  display: block;
+}
+
+/*------ login ------*/
+.login {
+  position: relative;
+
   display: inline-block;
 
+  font-size: 16px;
   vertical-align: top;
+}
+
+.login:hover .login__btn {
+  color: #323232;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.login:hover .login__btn::before {
+  background-position: -5px -524px;
+}
+
+.login__btn {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 8px 0;
+  padding-right: 16px;
+  padding-left: 44px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  vertical-align: top;
+
+  background: rgba(255, 255, 255, .2);
+  border-radius: 16px;
+}
+
+.login__btn::before {
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 19px;
+
+  background-position: -5px -495px;
+}
+
+.login__form {
+  position: absolute;
+  right: -2px;
+
+  display: none;
+  width: 246px;
+}
+
+.login:hover .login__form {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 .cart__product-list {
