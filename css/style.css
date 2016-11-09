@@ -146,6 +146,10 @@ body {
   vertical-align: top;
 }
 
+.form__link:hover {
+  color: #e84d37;
+}
+
 .form__link::after {
   content: "";
   position: absolute;
@@ -156,6 +160,10 @@ body {
   height: 1px;
 
   background: #adacaa;
+}
+
+.form__link:hover::after {
+  background: #f9cdc4;
 }
 
 .form__btn_login {
