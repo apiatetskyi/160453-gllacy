@@ -275,7 +275,7 @@ body {
 
 .main-nav__link_active {
   background: #d07058;
-  cursor: pointer;
+  cursor: default;
 }
 
 .main-nav__link::after {
@@ -415,9 +415,10 @@ body {
 
   width: 18px;
   height: 18px;
+  margin-top: -9px;
+  margin-left: -9px;
 
   background-position: -5px -441px;
-  transform: translate(-50%, -50%);
 }
 
 .search:hover .search__btn {
