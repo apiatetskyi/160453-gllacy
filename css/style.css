@@ -180,6 +180,24 @@ body {
   margin-bottom: 30px;
 }
 
+.page-header__contacts {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.page-header__phone {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}
+
 /*------ logo ------*/
 .logo {
   float: left;
