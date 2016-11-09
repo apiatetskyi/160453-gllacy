@@ -311,7 +311,7 @@ body {
 
   background: #ffffff;
   border-radius: 5px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
 }
 
 .sub-nav__link {
@@ -436,7 +436,7 @@ body {
   display: none;
   width: 311px;
 
-  box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
 }
 
 .search:hover .search__form {
@@ -500,6 +500,8 @@ body {
 
   display: none;
   width: 246px;
+
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
 }
 
 .login:hover .login__form {
