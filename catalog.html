@@ -38,7 +38,7 @@
           <div class="search">
             <a class="search__btn user-block__icon" href="#">Поиск</a>
             <form class="form search__form" id="search-form" action="#" method="POST">
-              <input class="form__input" type="text" name="search-query" placeholder="Что ищем?">
+              <input class="form__input form__input_search" type="text" name="search-query" placeholder="Что ищем?">
               <button class="hidden" type="submit" form="search-form">Найти</button>
             </form>
           </div>
@@ -48,8 +48,10 @@
               <input class="form__input" type="email" name="e-mail" placeholder="Электронная почта">
               <input class="form__input" type="password" name="password" placeholder="Пароль">
               <button class="btn form__btn" type="submit" form="login-form">Войти</button>
-              <a class="form__link" href="#">Забыли пароль?</a>
-              <a class="form__link" href="#">Новая регистрация</a>
+              <div class="form__link-holder">
+                <a class="form__link" href="#">Забыли пароль?</a>
+                <a class="form__link" href="#">Новая регистрация</a>
+              </div>
             </form>
           </div>
           <div class="cart">
