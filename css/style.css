@@ -10,6 +10,10 @@ body {
   background: #849d8f;
 }
 
+body > input[type="radio"] {
+  display: none;
+}
+
 /*------ general properties ------*/
 .clearfix::after {
   content: "";
@@ -27,6 +31,10 @@ body {
 
 .page-content {
   padding: 0 2.25%;
+}
+
+.hidden {
+  display: none;
 }
 
 /*------ btn ------*/
@@ -166,13 +174,10 @@ body {
   background: #f9cdc4;
 }
 
-.form__btn_login {
-  float: left;
-  padding: 10px 26px;
-}
-
 /*------ END general properties ------*/
 .page-header {
+  position: relative;
+
   min-height: 70px;
 }
 
@@ -499,9 +504,15 @@ body {
   right: -2px;
 
   display: none;
-  width: 246px;
+  width: 241px;
+  padding: 21px 17px;
 
   box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
+}
+
+.login__submit {
+  float: left;
+  padding: 10px 24px;
 }
 
 .login:hover .login__form {
