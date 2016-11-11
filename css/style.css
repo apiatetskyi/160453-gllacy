@@ -148,8 +148,6 @@ img {
 }
 
 .form__link {
-  position: relative;
-
   display: inline-block;
 
   font-size: 13px;
@@ -157,26 +155,14 @@ img {
   color: #323232;
   text-decoration: none;
   vertical-align: top;
+
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
 
 .form__link:hover {
   color: #e84d37;
-}
 
-.form__link::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 2px;
-  left: 0;
-
-  height: 1px;
-
-  background: #adacaa;
-}
-
-.form__link:hover::after {
-  background: #f9cdc4;
+  border-color: rgba(232, 77, 55, .3);
 }
 
 /*------ END general properties ------*/
@@ -793,6 +779,10 @@ img {
 
   font-size: 18px;
   line-height: 22px;
+}
+
+.promo__btn-holder {
+  text-align: right;
 }
 
 /*------ products ------*/
