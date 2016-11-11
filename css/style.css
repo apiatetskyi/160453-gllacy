@@ -40,7 +40,7 @@ body > input[type="radio"] {
 /*------ btn ------*/
 .btn {
   display: inline-block;
-  padding: 10px 21px;
+  padding: 11px 21px;
 
   font-weight: 700;
   font-size: 18px;
@@ -670,7 +670,7 @@ body > input[type="radio"] {
 .slider {
   position: relative;
 
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   padding-top: 319px;
 
   color: #ffffff;
@@ -739,20 +739,58 @@ body > input[type="radio"] {
   background-image: url("../img/slider-img-3.png");
 }
 
+/*------ promo ------*/
 .promo {
   margin-bottom: 40px;
+
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .promo__item {
   float: left;
+  box-sizing: border-box;
   width: 48.865619%;
   margin-right: 2.268760%;
+  padding: 17px 19px;
+  padding-bottom: 23px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
 }
 
 .promo__item:nth-child(2n) {
   margin-right: 0;
 }
 
+.promo__item_raspberry {
+  background-color: #6b1429;
+  background-image: url("../img/bg-raspberry.jpg");
+}
+
+.promo__item_chocolate {
+  background-color: #513328;
+  background-image: url("../img/bg-chocolate.jpg");
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo__desc {
+  margin: 0;
+  margin-bottom: 44px;
+
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/*------ products ------*/
 .products {
   margin-bottom: 40px;
 
