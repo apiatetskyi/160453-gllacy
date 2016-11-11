@@ -894,33 +894,78 @@ img {
   visibility: hidden;
 }
 
+/*------ features ------*/
 .features {
   margin-bottom: 40px;
-  padding: 27px 20px;
-  padding-bottom: 0;
+  padding: 23px 20px;
+  padding-bottom: 3px;
 
   font-size: 0;
+
+  background: #ecdfc0 url("../img/bg-wafer.jpg");
+  border-radius: 15px;
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
+  font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
 
 .features__desc {
+  position: relative;
+
   display: inline-block;
   box-sizing: border-box;
   width: 48.865619%;
   margin: 0;
   margin-right: 2.268760%;
-  margin-bottom: 27px;
+  margin-bottom: 22px;
   padding-left: 57px;
 
   font-size: 16px;
   vertical-align: top;
+}
+
+.features__desc::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+
+.features__desc_icecream::before {
+  width: 49px;
+  height: 49px;
+
+  background-position: -5px -281px;
+}
+
+.features__desc_cow::before {
+  width: 48px;
+  height: 49px;
+
+  background-position: -5px -86px;
+}
+
+.features__desc_leaf::before {
+  width: 49px;
+  height: 49px;
+
+  background-position: -5px -382px;
+}
+
+.features__desc_thermometer::before {
+  width: 48px;
+  height: 49px;
+
+  background-position: -5px -553px;
 }
 
 .features__desc:nth-child(2n+1) {
