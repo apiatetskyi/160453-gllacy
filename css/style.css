@@ -792,13 +792,15 @@ img {
 
 .product {
   position: relative;
+  z-index: 5;
 
   display: inline-block;
   width: 23.298429%;
   margin-right: 2.268760%;
-  margin-bottom: 60px;
+  margin-bottom: 38px;
 
   font-size: 16px;
+  line-height: 22px;
   text-align: center;
   vertical-align: top;
 }
@@ -812,31 +814,41 @@ img {
   position: absolute;
   top: -6px;
   right: -4.868913%;
+  bottom: -80px;
   left: -4.868913%;
   z-index: -5;
 
-  display: none;
-  height: calc(100% + 80px);
-
   background: #f8f7f4;
+  border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
+  visibility: hidden;
   opacity: .3;
 }
 
-.product:hover {
-  z-index: 5;
-}
-
 .product:hover::before {
-  display: block;
+  visibility: visible;
 }
 
 .product:hover .product__btn {
-  display: block;
+  visibility: visible;
 }
 
 .product__img-holder {
   position: relative;
+
+  margin-bottom: 7px;
+}
+
+.product_hit .product__img-holder::before {
+  content: "";
+  position: absolute;
+
+  width: 61px;
+  height: 61px;
+
+  background: #ffffff url("../img/spritesheet.png") no-repeat;
+  background-position: -5px -210px;
+  border-radius: 50%;
 }
 
 .product__img {
@@ -845,8 +857,8 @@ img {
 
 .product__price {
   position: absolute;
-  bottom: 20px;
-  left: 0;
+  bottom: 13px;
+  left: 1px;
 
   font-weight: 700;
   font-size: 45px;
@@ -859,16 +871,27 @@ img {
   font-size: 30px;
 }
 
+.product__link {
+  color: #ffffff;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.product:hover .product__link {
+  border-color: transparent;
+}
+
 .product__btn {
   position: absolute;
-  top: calc(100% + 15px);
+  bottom: -55px;
   left: 50%;
 
-  display: none;
   min-width: 193px;
   padding: 11px 0;
 
   transform: translateX(-50%);
+  visibility: hidden;
 }
 
 .features {
