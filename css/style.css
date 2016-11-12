@@ -792,7 +792,6 @@ img {
 
 .product {
   position: relative;
-  z-index: 5;
 
   display: inline-block;
   width: 23.298429%;
@@ -823,6 +822,10 @@ img {
   box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
   visibility: hidden;
   opacity: .3;
+}
+
+.product:hover {
+  z-index: 5;
 }
 
 .product:hover::before {
