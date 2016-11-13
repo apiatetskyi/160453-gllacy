@@ -63,14 +63,18 @@
               <div class="cart__product-list">
                 <table class="cart__table">
                   <tr class="cart__product-item">
-                    <td class="cart__del"><a class="cart__del-btn" href="#"><img src="img/icon-cart-del.png" alt="Удалить"></a></td>
+                    <td class="cart__del">
+                      <a class="cart__del-btn" href="#"><img src="img/icon-cart-del.png" alt="Удалить"></a>
+                    </td>
                     <td class="cart__product-img"><img src="img/product-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                     <td class="cart__product-name">Пломбир с апельсиновым джемом</td>
                     <td class="cart__product-quantity">1,5 кг х <span class="cart__product-price">200 руб.</span></td>
                     <td class="cart__product-cost">300 руб.</td>
                   </tr>
                   <tr class="cart__product-item">
-                    <td class="cart__del"><a class="cart__del-btn" href="#"><img src="img/icon-cart-del.png" alt="Удалить"></a></td>
+                    <td class="cart__del">
+                      <a class="cart__del-btn" href="#"><img src="img/icon-cart-del.png" alt="Удалить"></a>
+                    </td>
                     <td class="cart__product-img"><img src="img/product-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                     <td class="cart__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td class="cart__product-quantity">1,5 кг х <span class="cart__product-price">300 руб.</span></td>
@@ -188,18 +192,18 @@
             Адрес главного офиса и
             <br>офлайн магазина:
             <br>
-            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+            <b class="map__bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           </p>
           <p class="map__text">
             Для заказов по телефону:
             <br>
-            <b>8 812 450-25-25</b>
+            <b class="map__bold">8 812 450-25-25</b>
             <br> (с 10 до 20 ежедневно)
           </p>
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
       </div>
-      <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6260535226243!2d30.32112936634473!3d59.93834703187612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sua!4v1477571535893" height="430" allowfullscreen></iframe>
+      <div id="map"></div>
     </div>
     <div class="page-wrapper">
       <div class="page-content">
@@ -232,6 +236,28 @@
       </div>
     </div>
   </div>
+  <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <script>
+  ymaps.ready(init);
+
+  function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [59.9392, 30.329],
+        zoom: 16
+      }),
+
+      gllasyGeoPosition = new ymaps.Placemark([59.938631, 30.323055], {
+        hintContent: 'Gllasy — магазин мороженого'
+      }, {
+        iconImageHref: 'img/map-marker.png',
+        iconImageSize: [218, 142],
+        iconImageOffset: [-40, -140]
+      });
+
+    myMap.geoObjects
+      .add(gllasyGeoPosition)
+  }
+  </script>
 </body>
 
 </html>
