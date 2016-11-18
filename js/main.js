@@ -1,3 +1,17 @@
+var inputText = document.querySelectorAll(".form__input");
+
+for (var i = 0; i < inputText.length; i++) {
+  inputText[i].addEventListener("blur", function(event) {
+    var inputLabel = this.nextElementSibling;
+    if (this.value) {
+      inputLabel.classList.add("form__input-label_fixed")
+    } else {
+      inputLabel.classList.remove("form__input-label_fixed")
+    }
+  })
+}
+
+
 ymaps.ready(init);
 
 function init() {

@@ -42,15 +42,24 @@
             <div class="search">
               <a class="search__btn user-block__icon" href="#">Поиск</a>
               <form class="form search__form" id="search-form" action="#" method="POST">
-                <input class="form__input form__input_search" type="text" name="search-query" placeholder="Что ищем?">
+                <div class="form__input-holder">
+                  <input class="form__input form__input_search" id="search-input" type="text" name="search-query" placeholder="Что ищем?">
+                  <label class="form__input-label" for="search-input">Что ищем?</label>
+                </div>
                 <button class="hidden" type="submit" form="search-form">Найти</button>
               </form>
             </div>
             <div class="login">
               <a class="login__btn user-block__icon" href="#">Вход</a>
               <form class="form login__form clearfix" id="login-form" action="#" method="POST">
-                <input class="form__input" type="email" name="e-mail" placeholder="Электронная почта">
-                <input class="form__input" type="password" name="password" placeholder="Пароль">
+                <div class="form__input-holder">
+                  <input class="form__input" id="email-input" type="email" name="e-mail" placeholder="Электронная почта">
+                  <label class="form__input-label" for="email-input">Электронная почта</label>
+                </div>
+                <div class="form__input-holder">
+                  <input class="form__input" id="password-input" type="password" name="password" placeholder="Пароль">
+                  <label class="form__input-label" for="password-input">Пароль</label>
+                </div>
                 <button class="btn login__submit" type="submit" form="login-form">Войти</button>
                 <div class="form__link-holder">
                   <a class="form__link page-link_dark" href="#">Забыли пароль?</a>
@@ -156,7 +165,10 @@
               <form class="form news__form" id="subscribe-form" action="#" method="POST">
                 <p class="news__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                 <div class="news__input-container">
-                  <input class="form__input news__input" type="email" name="e-mail" placeholder="Электронная почта">
+                <div class="form__input-holder">
+                  <input class="form__input news__input" id="subscribe-input" type="email" name="e-mail" placeholder="Электронная почта">
+                  <label class="form__input-label" for="subscribe-input">Электронная почта</label>
+                </div>
                   <button class="btn news__btn" type="submit" form="subscribe-form">Отправить</button>
                 </div>
               </form>
@@ -169,14 +181,12 @@
       <div class="page-wrapper map__page-wrapper">
         <div class="map__contacts">
           <p class="map__text">
-            Адрес главного офиса и<br>
-            офлайн магазина:<br>
+            Адрес главного офиса и<br>офлайн магазина:<br>
             <b class="map__bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           </p>
           <p class="map__text">
             Для заказов по телефону:<br>
-            <b class="map__bold">8 812 450-25-25</b><br>
-            (с 10 до 20 ежедневно)
+            <b class="map__bold">8 812 450-25-25</b><br> (с 10 до 20 ежедневно)
           </p>
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
