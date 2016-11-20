@@ -122,7 +122,7 @@ img {
 
 .form__input-label {
   position: absolute;
-  top: 11px;
+  top: 0;
   left: 12px;
 
   color: #999999;
@@ -133,7 +133,8 @@ img {
   transition: top .3s, opacity .3s;
 }
 
-.form__input {
+.form__input,
+.form__textarea {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
@@ -146,12 +147,26 @@ img {
   color: #323232;
   vertical-align: top;
 
+  background-image: none;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   outline: none;
 }
 
-.form__input::-webkit-input-placeholder {
+.form__input:hover,
+.form__textarea:hover {
+  border-color: #c7c6c5;
+  box-shadow: 0 0 0 1px #c7c6c5;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: #8fbdec;
+  box-shadow: 0 0 0 1px #8fbdec;
+}
+
+.form__input::-webkit-input-placeholder,
+.form__textarea::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
 
@@ -160,7 +175,8 @@ img {
   transition: opacity .3s;
 }
 
-.form__input::-moz-placeholder {
+.form__input::-moz-placeholder,
+.form__textarea::-moz-placeholder {
   font-weight: 400;
   color: #999999;
 
@@ -169,7 +185,8 @@ img {
   transition: opacity .3s;
 }
 
-.form__input:-ms-input-placeholder {
+.form__input:-ms-input-placeholder,
+.form__textarea:-ms-input-placeholder {
   font-weight: 400;
   line-height: normal;
   color: #999999;
@@ -179,25 +196,29 @@ img {
   transition: opacity .3s;
 }
 
-.form__input:focus::-webkit-input-placeholder {
+.form__input:focus::-webkit-input-placeholder,
+.form__textarea:focus::-webkit-input-placeholder {
   opacity: 0;
 
   transition: opacity .3s;
 }
 
-.form__input:focus::-moz-placeholder {
+.form__input:focus::-moz-placeholder,
+.form__textarea:focus::-moz-placeholder {
   opacity: 0;
 
   transition: opacity .3s;
 }
 
-.form__input:focus:-ms-input-placeholder {
+.form__input:focus:-ms-input-placeholder,
+.form__textarea:focus:-ms-input-placeholder {
   opacity: 0;
 
   transition: opacity .3s;
 }
 
-.form__input:focus + .form__input-label {
+.form__input:focus + .form__input-label,
+.form__textarea:focus + .form__input-label {
   top: -15px;
 
   font-size: 11px;
@@ -217,16 +238,6 @@ img {
 
   visibility: visible;
   opacity: 1;
-}
-
-.form__input:hover {
-  border-color: #c7c6c5;
-  box-shadow: 0 0 0 1px #c7c6c5;
-}
-
-.form__input:focus {
-  border-color: #8fbdec;
-  box-shadow: 0 0 0 1px #8fbdec;
 }
 
 .form__input_search {
@@ -1515,4 +1526,134 @@ img {
 .paginator__link_disabled {
   cursor: default;
   opacity: .2;
+}
+
+@keyframes showForm {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  50% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes hideForm {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+.feedback {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+
+  background: rgba(0, 0, 0, .4);
+  visibility: hidden;
+}
+
+.feedback_show {
+  visibility: visible;
+}
+
+.feedback__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 430px;
+  margin-left: -239px;
+  padding: 16px 24px;
+  padding-bottom: 25px;
+
+  transform: translateY(-50%);
+
+  transition: top .5s;
+  animation: hideForm .8s ease;
+}
+
+.feedback__form_show {
+  animation: showForm .8s ease;
+}
+
+.feedback__input {
+  width: 267px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.feedback__textarea {
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  resize: none;
+}
+
+.feedback__title {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.feedback__btn-holder {
+  text-align: right;
+}
+
+.feedback__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 0;
+}
+
+.feedback__close::before,
+.feedback__close::after {
+  content: "";
+  position: absolute;
+
+  background: #000000;
+  transform: rotate(45deg);
+}
+
+.feedback__close::before {
+  top: 50%;
+  left: -2px;
+
+  width: 24px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.feedback__close::after {
+  top: -2px;
+  left: 50%;
+
+  width: 2px;
+  height: 24px;
+  margin-left: -1px;
 }
